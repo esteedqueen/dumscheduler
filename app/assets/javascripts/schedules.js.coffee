@@ -1,12 +1,11 @@
 $(document).ready ->
   $("#calendar").fullCalendar
-    left: "prev,next,today"
-    center: "title"
-    right: "month,agendaWeek,agendaDay"
-    defaultView: "month"
-    height: 500
-    slotMinutes: 15
     events: '/schedules.json'
-    eventColor: 'yellow'
+    eventRender: (event, element) ->
+       element.css 'background-color','yellow' if event.status
+       element.css 'background-color','red' if !event.status
+       element.find('.fc-time').hide();
+       return
+    eventColor: 'white'
 
   return
