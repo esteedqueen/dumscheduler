@@ -8,7 +8,5 @@ $(document).ready ->
     slotMinutes: 15
     events: '/schedules.json'
     eventColor: 'yellow'
-    timeFormat: "h:mm t{ - h:mm t} "
-    dragOpacity: "0.5"
 
   return
