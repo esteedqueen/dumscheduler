@@ -494,7 +494,7 @@ strong,
    3.1 SECTION: HOME / HEADER         
 -----------------------------------------*/
 .header {
-	background: url(../images/background-images/1.jpg) no-repeat center top fixed;
+	background: url('/assets/background-images/1.jpg') no-repeat center top fixed;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
@@ -731,7 +731,7 @@ strong,
    3.5 SECTION: STATS 
 -----------------------------------------*/
 .stats {
-	background: url(../images/background-images/2.jpg) no-repeat center top fixed;
+	background: url('/assets/background-images/2.jpg') no-repeat center top fixed;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
@@ -887,7 +887,7 @@ strong,
    3.8 SECTION: SCREENSHOTS   
 -----------------------------------------*/
 .features {
-	background: url(../images/background-images/1.jpg) no-repeat top center fixed;
+	background: url('/assets/background-images/1.jpg') no-repeat top center fixed;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
@@ -1086,7 +1086,7 @@ strong,
    3.12 SECTION: CALL TO ACTION
 -----------------------------------------*/
 .call-to-action {
-    background: url('../images/background-images/2.jpg') fixed no-repeat top center;
+    background: url('/assets/background-images/2.jpg') fixed no-repeat top center;
     -webkit-background-size: cover;
     background-size: cover;
 }

@@ -13,6 +13,14 @@
  *= require_tree .
  *= require_self
  *= require fullcalendar
+ *= require animate.min
+ *= require icons
+ *= require nivo-lightbox
+ *= require owl.carousel
+ *= require owl.theme
+ *= require responsive
+ *= require styles
+
  */
 
 
