@@ -13,6 +13,7 @@
 //= require jquery
 //= require moment.min
 //= require jquery_ujs
+//= require bootstrap
 //= require fullcalendar
 //= require fullcalendar.min
 //= require_tree .
