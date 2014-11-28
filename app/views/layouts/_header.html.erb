@@ -1,12 +1,29 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-	  <div class="container">
-	    <%= link_to "Dumsoly", root_path, id: "logo" %>
-	    <nav>
-	      <ul class="nav navbar-nav pull-right">
-	        <li><%= link_to "How it works",   about_path %></li>
-	        <li><%= link_to "Log in",   login_path %></li>
-	        <li><%= link_to "Sign up", signup_path %></li>
-	      </ul>
-	    </nav>
-	  </div>
-</header>
+ <!-- STICKY NAVIGATION -->
+            <div class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation" role="navigation">
+                <div class="container">
+                    <div class="navbar-left">
+                        
+                        <!-- LOGO ON STICKY NAV BAR -->
+                        
+                        <!-- LOGO -->
+                        <a class="navbar-brand">
+                            <%= link_to image_tag("small6.png"), "/" %>DUMSOLY
+                        </a>
+                        
+                    </div>
+                    
+                    <!-- TOP BAR -->
+                    <div class="navbar-collapse collapse" id="stamp-navigation">
+                        
+                        
+                        <!-- LOGIN REGISTER -->
+                        <ul class="nav navbar-nav navbar-right login-register small-text">
+                            <li class="login js-login"><%= link_to "Login",   login_path %></li>
+                            <li class="register-button js-register inpage-scroll"><%= link_to "Get Notifications", signup_path, class: "navbar-register-button"%></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /END CONTAINER -->
+            </div>
+            
+            <!-- /END STICKY NAVIGATION -->

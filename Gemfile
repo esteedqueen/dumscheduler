@@ -13,6 +13,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'pry'
 gem 'rails-html-sanitizer', '1.0.1'
+gem 'bootstrap-sass-extras'
 gem 'responders', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 

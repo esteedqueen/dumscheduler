@@ -15,4 +15,14 @@
 //= require jquery_ujs
 //= require fullcalendar
 //= require fullcalendar.min
+//= require bootstrap.min
+//= require jquery.nav
+//= require smoothscroll
+//= require wow.min
+//= require nivo-lightbox.min
+//= require owl.carousel.min
+//= require jquery.stellar.min
+//= require jquery.ajaxchimp.min
+//= require retina.min
+//= require custom
 //= require_tree .
