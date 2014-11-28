@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  starts_at: 2014-11-23 08:02:26
+  start_time: 2014-11-23 08:02:26
   time_of_day: MyString
   status: false
 
 two:
-  starts_at: 2014-11-23 08:02:26
+  start_time: 2014-11-23 08:02:26
   time_of_day: MyString
   status: false
