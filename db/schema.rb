@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141123154713) do
+ActiveRecord::Schema.define(version: 20141128053941) do
 
   create_table "schedules", force: true do |t|
     t.datetime "start_time"
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(version: 20141123154713) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.datetime "end_time"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
