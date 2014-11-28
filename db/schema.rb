@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141128053941) do
+ActiveRecord::Schema.define(version: 20141128113428) do
 
   create_table "schedules", force: true do |t|
     t.datetime "start_time"
@@ -25,8 +25,11 @@ ActiveRecord::Schema.define(version: 20141128053941) do
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

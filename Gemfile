@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.2.0.beta4'
+gem 'bcrypt', '3.1.7'
 gem 'bootstrap-sass'
 gem "simple_calendar"
 gem 'fullcalendar-rails'
