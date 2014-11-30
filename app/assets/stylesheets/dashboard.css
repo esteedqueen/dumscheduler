@@ -11,18 +11,17 @@
  * file per style scope.
  *
  *= require_self
+ *= require pace-theme-flash
+ *= require bootstrap.min
+ *= require bootstrap-theme.min
+ *= require font-awesome
  *= require fullcalendar
  *= require animate.min
- *= require blue
- *= require icons
- *= require nivo-lightbox
- *= require owl.carousel
- *= require owl.theme
- *= require responsive
- *= require custom
- *= require scaffolds
- *= require schedules
- *= require styles
+ *= require large_screen_tweak
+ *= require magic_space
+ *= require dash-style
+ *= require dash-responsive
+ *= require custom-icon-set
 
  
 

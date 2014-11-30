@@ -2,8 +2,8 @@
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
+  <%= stylesheet_link_tag    'dashboard', media: 'all' %>
+  <%= javascript_include_tag 'dashboard' %>
   <%= csrf_meta_tags %>
   <meta content="width=device-width,initial-scale=1.0" name="viewport" />
   <meta content="My first Rails App" name="description"/>
@@ -11,13 +11,21 @@
   <%= render 'layouts/shim' %>
 	 
 </head>
-<body>
+<body class="error-body no-top">
 	<%= render 'layouts/header' %>
+	<br/><br/><br/><br/><br/>
+	<div class="container">
+
+	<% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
 	
 	<%= yield %>
 	
 	<%= render 'layouts/footer' %>
 	<%= debug(params) if Rails.env.development? %>
+	
+	</div>
 	
 </body>
 </html>
