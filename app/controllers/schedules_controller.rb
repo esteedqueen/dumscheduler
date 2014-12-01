@@ -1,15 +1,21 @@
 class SchedulesController < ApplicationController
+  layout "dashboard"
+  
+
   before_action :set_schedule, only: [:show, :edit, :update, :destroy]
+
 
   # GET /schedules
   # GET /schedules.json
   def index
     @schedules = Schedule.all
+    # render :layout => 'dashboard'
   end
 
   # GET /schedules/1
   # GET /schedules/1.json
   def show
+
   end
 
   # GET /schedules/new

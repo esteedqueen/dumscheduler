@@ -15,4 +15,9 @@
 //= require pace.min
 //= require jquery.validate.min
 //= require login
-
+//= require jquery-ui-1.10.1.custom.min
+//= require bootstrap-datepicker
+//= require dashboard
+//= require core
+//= require chat
+//= require demo

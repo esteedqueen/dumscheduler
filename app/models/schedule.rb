@@ -4,6 +4,8 @@ class Schedule < ActiveRecord::Base
   
   validates_inclusion_of :time_of_day, in: Choices['time_of_day']
 
+  belongs_to :user
+
 
 
 end

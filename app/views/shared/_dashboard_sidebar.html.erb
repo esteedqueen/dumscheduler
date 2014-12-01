@@ -1,0 +1,32 @@
+<div class="page-sidebar" id="main-menu">
+
+		<div class="page-sidebar-wrapper scrollbar-dynamic" id="main-menu-wrapper">
+			<div class="user-info-wrapper">
+				<div class="profile-wrapper"><%= gravatar_for @user %> </div>
+				<div class="user-info">
+					<div class="greeting">Welcome</div>
+					<div class="username"><%= @user.name %></div>
+					<div class="status">Status<a href="#">
+						<div class="status-icon green"></div>
+						Online</a></div>
+					</div>
+				</div>
+
+
+				<ul>
+					<li class="start"> <a href="index-2.html"> <i class="icon-custom-home"></i> <span class="title">Dashboard</span>  </a>
+						
+					</li>
+					<li class=""> <a href="widgets.html"> <span class="title">Account Settings</span> <span class="label label-important pull-right "></span></a> 
+					</li>
+					
+					<li class=""> <a href="email.html"> <span class="title">Notifications</span> <span class=" badge badge-disable pull-right ">2</span></a> 
+					</li>
+					
+					
+				</ul>
+						
+				<div class="clearfix"></div>
+
+		</div>
+</div>

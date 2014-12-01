@@ -19,9 +19,12 @@
  *= require animate.min
  *= require large_screen_tweak
  *= require magic_space
+ *= require jquery.scrollbar
+ *= require datepicker
  *= require dash-style
  *= require dash-responsive
  *= require custom-icon-set
+
 
  
 

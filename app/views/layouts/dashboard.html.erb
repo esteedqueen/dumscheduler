@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag    'dashboard', media: 'all' %>
+  <%= javascript_include_tag 'dashboard' %>
+  <%= csrf_meta_tags %>
+  <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+  <meta content="My first Rails App" name="description"/>
+  <meta content="Esther Olatunde" name="author"/>
+  <%= render 'layouts/shim' %>
+	 
+</head>
+<body>
+	<%#= render 'layouts/header' %>
+	<%= render 'shared/dashboard_header' %>
+
+	<div class="page-container row-fluid">
+
+	<%= render 'shared/dashboard_sidebar' %>
+
+	<div class="page-content">
+ 
+
+	<div class="clearfix"></div>
+	<div class="content">
+
+	
+	<%= yield %>
+	
+	<%#= render 'layouts/footer' %>
+	<%#= debug(params) if Rails.env.development? %>
+	
+	</div>
+	</div>
+	</div>
+	
+	
+</body>
+</html>
