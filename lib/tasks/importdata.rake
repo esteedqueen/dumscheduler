@@ -12,7 +12,8 @@ namespace :csv do
       schedule = Schedule.new({
         :start_time => row[0],
         :time_of_day => row[1],
-        :end_time => row[3]
+        :end_time => row[3],
+        :location => row[4]
         })
 
       if (row[2] == "FALSE")

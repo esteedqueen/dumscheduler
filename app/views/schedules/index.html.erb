@@ -1,18 +1,39 @@
-<div class="container">
-<p id="notice"><%= notice %></p>
-<div class="schedules-view">
+	<p id="searchParam" style="display: none"><%= @search %></p>
+	<p id="notice"><%= notice %></p>
 
-<h1>Listing Schedules</h1>
+		<div class="row" style="max-height:600px;">
+			
+			<div class="tiles row tiles-container red no-padding">
+				<div class="col-md-4 tiles red no-padding">
+					<div class="tiles-body">
+						<div class="calender-options-wrapper">
+							<h3 class="text-white semi-bold" id="calender-current-day"></h3>
+							<h2 class="text-white" id="calender-current-date"></h2>
+							<div id='external-events' class="hide-inphone events-wrapper">
+								<div class="events-heading">&nbsp;Week Summary</div>
+								<div class='external-event'>3 Off Days</div>
+								<div class='external-event'>Monday, Wednesday and Thursday</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8 tiles white no-padding">
+					<div class="tiles-body">
+						
+						<div id="calendar"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+	
 
-<div id="calendar">
-  
-</div>
+
+	<br>
+
+	<%= link_to 'New Schedule', new_schedule_path %>
+
+	
 
 
-<br>
-
-<%= link_to 'New Schedule', new_schedule_path %>
-
-</div>
-
-</div>

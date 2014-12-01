@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141128113428) do
+ActiveRecord::Schema.define(version: 20141201132650) do
+
+  create_table "feedbacks", force: true do |t|
+    t.string   "user_status"
+    t.integer  "schedule_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "feedbacks", ["schedule_id"], name: "index_feedbacks_on_schedule_id"
+
+  create_table "locations", force: true do |t|
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "locatable_id"
+    t.string   "locatable_type"
+  end
 
   create_table "schedules", force: true do |t|
     t.datetime "start_time"
@@ -20,7 +39,11 @@ ActiveRecord::Schema.define(version: 20141128113428) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.datetime "end_time"
+    t.integer  "user_id"
+    t.string   "location"
   end
+
+  add_index "schedules", ["user_id"], name: "index_schedules_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

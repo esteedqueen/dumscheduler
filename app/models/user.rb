@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :password, length: { minimum: 6 }
 
+  has_many :locations, as: :locatable
+
   has_many :schedules
 
   # Returns the hash digest of the given string.

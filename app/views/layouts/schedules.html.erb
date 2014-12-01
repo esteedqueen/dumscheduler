@@ -2,7 +2,7 @@
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= stylesheet_link_tag    'dashboard', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <meta content="width=device-width,initial-scale=1.0" name="viewport" />
@@ -12,12 +12,29 @@
 	 
 </head>
 <body>
-	<%= render 'layouts/header' %>
+	<%#= render 'layouts/header' %>
+	<%= render 'shared/schedules_header' %>
+
+	<div class="page-container row-fluid">
+
+	<%= render 'shared/schedules_sidebar' %>
+
+	<div class="page-content">
+ 
+
+	<div class="clearfix"></div>
+	<div class="content">
+
 	
 	<%= yield %>
 	
-	<%= render 'layouts/footer' %>
+	<%#= render 'layouts/footer' %>
 	<%#= debug(params) if Rails.env.development? %>
+	
+	</div>
+	</div>
+	</div>
+	
 	
 </body>
 </html>

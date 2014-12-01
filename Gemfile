@@ -16,6 +16,8 @@ gem 'pry'
 gem 'rails-html-sanitizer', '1.0.1'
 gem 'bootstrap-sass-extras'
 gem 'responders', '~> 2.0'
+gem 'nifty-generators'
+# gem 'geocoder'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
@@ -40,3 +42,5 @@ group :production do
   gem 'unicorn',        '4.8.3'
 end
 
+
+gem 'mocha', group: :test

@@ -1,5 +1,5 @@
 class SchedulesController < ApplicationController
-  layout "dashboard"
+  layout "schedules"
   
 
   before_action :set_schedule, only: [:show, :edit, :update, :destroy]
@@ -8,7 +8,14 @@ class SchedulesController < ApplicationController
   # GET /schedules
   # GET /schedules.json
   def index
-    @schedules = Schedule.all
+    @search = "East Legon"
+    if params[:search]
+      @search = params[:search]
+    end
+
+    if @search != nil
+      @schedules = Schedule.where(:location => @search)
+    end
     # render :layout => 'dashboard'
   end
 

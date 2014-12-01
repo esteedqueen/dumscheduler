@@ -1,3 +1,7 @@
 time_of_day:
  - day
  - night
+
+user_status:
+ - on
+ - off

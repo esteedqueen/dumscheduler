@@ -1,14 +1,20 @@
 Rails.application.routes.draw do
 
   
+  resources :locations
+
   root                    'static_pages#home'
   get     'about'   =>    'static_pages#about'
   get     'signup'  =>    'users#new'
   get     'contact' =>    'static_pages/contact'
   get     'login'   =>    'sessions#new'
   post    'login'   =>    'sessions#create'
-  delete  'logout'  =>    'sessions#destroy'
-  resources :schedules
+  get  'logout'  =>    'sessions#destroy'
+  
+  resources :schedules do
+    resources :feedbacks
+  end
+  
   resources :users
 
 

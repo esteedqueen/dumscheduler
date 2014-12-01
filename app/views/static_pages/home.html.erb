@@ -42,13 +42,24 @@
                             
                             <!-- BUTTON -->
                             <div class="button">
-                                <li class="m-r-10 input-prepend inside search-form no-boarder"> 
+                                <!-- <li class="m-r-10 input-prepend inside search-form no-boarder"> 
                                     <span class="add-on"> 
                                         <span class="iconset top-search"></span>
                                     </span>
                                     <input name="" type="text" class="no-boarder" placeholder="Enter your location" style="width:350px; text-align:center">
-                                </li>
-                                <%= link_to "Search Schedule", schedules_path, class: "btn btn-primary secondary-button" %>
+                                </li> -->
+                                <div class="input-group">
+                                  <%= form_tag("/schedules", method: "get") do %>
+                                    <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "search"%>
+                                      <span class="input-group-btn">
+                                          <%= submit_tag "Search", class: "btn btn-default" %>
+                                        <% end %>
+                                      </span>
+                                      <p style="color:white"><%= logged_in? %></p>
+                                    
+                                </div>
+
+                                <%#= link_to "Search Schedule", {:controller => "schedules", :action => "index", }, class: "btn btn-primary secondary-button" %>
                             </div>
                             <!-- /END BUTTON -->
                             

@@ -10,7 +10,12 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require moment.min
 //= require jquery.min
+//= require jquery_ujs
+//= require fullcalendar
+//= require fullcalendar.min
 //= require bootstrap.min
 //= require pace.min
 //= require jquery.validate.min
@@ -21,3 +26,5 @@
 //= require core
 //= require chat
 //= require demo
+//= require schedules
+//= require calender
