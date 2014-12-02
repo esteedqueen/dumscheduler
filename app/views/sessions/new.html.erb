@@ -34,8 +34,11 @@
 						<div class="row">
 							<div class="control-group  col-md-10">
 								<div class="checkbox checkbox check-success"> <a href="#">Trouble login in?</a>&nbsp;&nbsp;
-									<input type="checkbox" id="checkbox1" value="1">
-									<label for="checkbox1">Keep me reminded </label>
+									
+									<%= f.label :remember_me, class: "checkbox inline" do %>
+							        <%= f.check_box :remember_me %>
+							        <span>Remember me on this computer</span>
+							      <% end %>
 								</div>
 							</div>
 						</div>

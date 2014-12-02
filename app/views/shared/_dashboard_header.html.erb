@@ -12,7 +12,7 @@
                         
                         <!-- LOGO -->
                         <a class="navbar-brand">
-                            <%= link_to image_tag("small6.png"), "/" %>DUMSOLY
+                            <%= link_to image_tag("small6.png"), "/" %><span class="" style="text-color:white">DUMSOLY</span>
                         </a>
                         
             </div>
@@ -39,6 +39,7 @@
 					<a href="#" class="dropdown-toggle" id="my-task-list" data-placement="bottom" data-content='' data-toggle="dropdown" data-original-title="Notifications"> 
 						<div class="user-details">
 							<div class="username">
+							<% if logged_in? %>
 								<span class="badge badge-important">2</span>
 								<%= @user.name %>
 							</div>
@@ -86,6 +87,7 @@
 
 				</div>
 				<ul class="nav quick-section ">
+
 					<li class="quicklinks">
 						<a data-toggle="dropdown" class="dropdown-toggle  pull-right " href="#" id="user-options">
 							<div class="iconset top-settings-dark "><%= image_tag('settings3.png')%></div>
@@ -104,6 +106,10 @@
 							
 						</ul>
 					</li>
+
+					<% else %>
+			          <li><%= link_to "Log in", login_path %></li>
+			        <% end %>
 					
 				</ul>
 		</div>

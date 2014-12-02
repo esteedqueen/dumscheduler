@@ -1,0 +1,10 @@
+<%= form_for([@schedule, @schedule.feedbacks.build]) do |f| %>
+  
+   <div class="field">
+    <%= f.select(:user_status, options_for_select([['Yes', 'This is accurate.'], ['No', 'No, this is not accurate!']])) %>
+  </div>
+
+<br>
+  <%= f.submit %>
+</p>
+<% end %>

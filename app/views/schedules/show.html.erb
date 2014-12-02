@@ -1,24 +1,89 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Starts time:</strong>
-  <%= @schedule.start_time %>
-</p>
+<div class="row">
+  <div class="col-md-10">
+    <div class="grid simple horizontal purple">
+      <div class="grid-title no-border">
+        <h4>ECG <span class="semi-bold">Schedule</span></h4>
+        <div class="tools"> <a href="javascript:;" class="collapse"></a> <a href="#grid-config" data-toggle="modal" class="config"></a> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
+      </div>
+      <div class="grid-body no-border">
+        <div class="row-fluid">
+          <div>
+            <h3><%= Date::DAYNAMES[@schedule.start_time.wday] %>, <span class="semi-bold"><%= @schedule.start_time.to_date %></span></h3>
+            <!-- <div class="color-bands green"></div>
+            <div class="color-bands purple"></div>
+            <div class="color-bands red"></div>
+            <div class="color-bands blue"></div> -->
+            <br>
+            
+            <h3> During the <strong><%= @schedule.time_of_day.capitalize %></strong>, between <br/>   
+            </h3>         
 
-<p>
-  <strong>End time:</strong>
-  <%= @schedule.end_time %>
-</p>
+            <h3>
+              <strong><%= @schedule.start_time.strftime('%T') %></strong> and <strong><%= @schedule.end_time.strftime('%T') %></strong>
+            </h3>
 
-<p>
-  <strong>Time of day:</strong>
-  <%= @schedule.time_of_day %>
-</p>
+            <h3>
+              <% if @schedule.status? %>
+              <div class="color-bands green"></div>
+              Lights ON
+              <% else %>
+              <div class="color-bands red"></div>
+              Lights OUT
+              <% end %>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-10">
+    <div class="grid simple vertical green">
+      <div class="grid-title ">
+        <h4>Users <span class="semi-bold">Feedback</span></h4>
+        <div class="tools"> <a href="javascript:;" class="collapse"></a> <a href="#grid-config" data-toggle="modal" class="config"></a> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
+      </div>
+      <div class="grid-body">
+        <div id="email-list">
+          <table class="table table-striped table-fixed-layout table-hover" id="emails">
+            <thead>
+              <tr>                
+                <th class="medium-cell"></th>
+                <th></th>               
+              </tr>
+            </thead>
+            <tbody>
+            <% @schedule.feedbacks.each do |feedback| %>
+              <tr>
+                <td class="clickable v-align-middle">Jane Smith</td>
+                <td class="clickable v-align-middle"><% if (feedback.user_status == "This is accurate") %><span class="label label-success"><%= feedback.user_status %></span>&nbsp;
+                  <% else %>
+                  <span class="label label-important"><%= feedback.user_status %></span>&nbsp;
+                  <% end %></td>   
+                <% end %>              
+              </tr>
+              
+            </tbody>
+          </table>
+                     
+        </div>
 
-<p>
-  <strong>Status:</strong>
-  <%= @schedule.status %>
-</p>
+        <div>
+          <h4>Give your feedback, is this Accurate?</h4>
+          <%= render "feedbacks/form" %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
 
 <%= link_to 'Edit', edit_schedule_path(@schedule) %> |
 <%= link_to 'Back', schedules_path %>

@@ -3,5 +3,9 @@ time_of_day:
  - night
 
 user_status:
- - on
- - off
+ - LightisOn
+ - LightisOff
+
+location:
+ - East Legon
+ - North Legon

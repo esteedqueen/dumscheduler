@@ -1,6 +1,7 @@
 <div class="page-sidebar" id="main-menu">
 
 		<div class="page-sidebar-wrapper scrollbar-dynamic" id="main-menu-wrapper">
+		<% if logged_in? %>
 			<div class="user-info-wrapper">
 				<div class="profile-wrapper"><%= gravatar_for @user %> </div>
 				<div class="user-info">
@@ -26,7 +27,10 @@
 					
 				</ul>
 						
-				<div class="clearfix"></div>
+				
+				<% else %>
+		          <div class="clearfix"></div>
+		        <% end %>
 
 		</div>
 </div>

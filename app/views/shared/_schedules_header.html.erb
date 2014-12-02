@@ -12,7 +12,7 @@
                         
                         <!-- LOGO -->
                         <a class="navbar-brand">
-                            <%= link_to image_tag("small6.png"), "/" %>DUMSOLY
+                            <%= link_to image_tag("small6.png"), "/" %><span class="" style="text-color:white">DUMSOLY</span>
                         </a>
                         
             </div>
@@ -33,14 +33,14 @@
 				</ul>
 			</div>
 
-
+			<% if logged_in? %>
 			<div class="pull-right">
 				<div class="chat-toggler">
 					<a href="#" class="dropdown-toggle" id="my-task-list" data-placement="bottom" data-content='' data-toggle="dropdown" data-original-title="Notifications"> 
 						<div class="user-details">
 							<div class="username">
 								<span class="badge badge-important">2</span>
-								Admin<%#= @user.name %>
+								<%= @current_user.name %>
 							</div>
 						</div>
 						<div class="iconset top-down-arrow"></div>
@@ -86,16 +86,17 @@
 
 				</div>
 				<ul class="nav quick-section ">
+
 					<li class="quicklinks">
 						<a data-toggle="dropdown" class="dropdown-toggle  pull-right " href="#" id="user-options">
 							<div class="iconset top-settings-dark "><%= image_tag('settings3.png')%></div>
 						</a>
 						<ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
-							<li><a href="#"> My Account</a>
+							<li><a href="user-profile.html"> My Account</a>
 							</li>
-							<li><%= link_to "My Schedule", schedules_path %>
+							<li><%= link_to "My Calendar", schedules_path %>
 							</li>
-							<li><a href="#"> My Inbox&nbsp;&nbsp;<span class="badge badge-important animated bounceIn">2</span></a>
+							<li><a href="email.html"> My Inbox&nbsp;&nbsp;<span class="badge badge-important animated bounceIn">2</span></a>
 							</li>
 							<li class="divider"></li>
 							<li><%= link_to image_tag('logout.png') + " Log Out", logout_path %>
@@ -103,10 +104,36 @@
 							</li>
 							
 						</ul>
-					</li>
-					
+					</li>					
 				</ul>
+		<% else %>
+		<div class="chat-toggler">
+			
+				<div class="user-details">
+					<div class="username">
+						<span class="badge badge-important"></span>
+						Hello. Welcome to Dumsoly App.
+					</div>
+				</div>
+				
 		</div>
+		<div class="navbar-collapse collapse" id="stamp-navigation">
+                        
+                        
+            <!-- LOGIN REGISTER -->
+            <ul class="nav navbar-nav navbar-right login-register small-text">
+                <li class="login js-login"><%= link_to "Login",   login_path %></li>
+                <li class="register-button js-register inpage-scroll"><%= link_to "Get Notifications", signup_path, class: "navbar-register-button"%></li>
+            </ul>
+        </div>
+			
+			
+
+		</div>
+		<% end %>
+
+		</div>
+		
 
 	</div>
 
