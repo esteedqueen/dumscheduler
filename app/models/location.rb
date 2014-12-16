@@ -1,7 +1,7 @@
 class Location < ActiveRecord::Base
 
 
-  # has_many :schedules
+  has_many :schedules
 
   # geocoded_by :address
   # after_validation :geocode

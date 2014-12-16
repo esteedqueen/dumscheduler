@@ -58,7 +58,7 @@
             <tbody>
             <% @schedule.feedbacks.each do |feedback| %>
               <tr>
-                <td class="clickable v-align-middle">Jane Smith</td>
+                <td class="clickable v-align-middle"><%= feedback.user.name %></td>
                 <td class="clickable v-align-middle"><% if (feedback.user_status == "This is accurate") %><span class="label label-success"><%= feedback.user_status %></span>&nbsp;
                   <% else %>
                   <span class="label label-important"><%= feedback.user_status %></span>&nbsp;

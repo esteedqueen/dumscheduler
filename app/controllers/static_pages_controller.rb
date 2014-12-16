@@ -1,6 +1,12 @@
 class StaticPagesController < ApplicationController
 
   def home
+    @locations = Location.all
+    @location_array = []
+
+    @locations.each do |location|
+      @location_array << [location.address, location.id]
+    end
   end
 
   def about

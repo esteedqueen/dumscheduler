@@ -49,7 +49,7 @@
 
                                     <%= form_tag("/schedules", method: "get") do %>
                                     <div class="container" style="width:350px; align:center">
-                                    <%= select_tag(:search, options_for_select([['East Legon', 'East Legon'], ['North Legon', 'North Legon']]), :prompt => "Select your location") %>
+                                    <%= select_tag(:search, options_for_select(@location_array), :prompt => "Select your location") %>
                                     </div>
                                  </li>
                                     <%= submit_tag "Search Schedule", class: "btn btn-primary secondary-button", :style => "width:250px; text-align:center" %>

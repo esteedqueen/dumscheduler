@@ -8,14 +8,18 @@ class SchedulesController < ApplicationController
   # GET /schedules
   # GET /schedules.json
   def index
-    @search = "East Legon"
+    @search = "2"
     if params[:search]
       @search = params[:search]
     end
 
-    if @search != nil
-      @schedules = Schedule.where(:location => @search)
-    end
+    @schedules = Schedule.where(location_id: @search.to_i)
+    
+    @location = Location.find(@search.to_i)
+
+    # if @search != nil
+    #   @schedules = Schedule.where(:location => @search)
+    # end
     # render :layout => 'dashboard'
   end
 

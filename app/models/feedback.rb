@@ -1,3 +1,4 @@
 class Feedback < ActiveRecord::Base
-  belongs_to :schedule
+  has_one :schedule
+  belongs_to :user
 end
