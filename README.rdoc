@@ -1,5 +1,8 @@
 == README
 
+Dumsoly Electricity Schedule App : My first product built with Ruby on Rails :)
+This is the final version.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
